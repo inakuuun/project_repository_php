@@ -1,15 +1,17 @@
 <?php
-
-    require_once('database.php');
+    // データベースに接続用の処理
+    require_once('../common/database.php');
     
     /* データベースへ登録 */
     if(!empty($_POST['name'])||!empty($_POST['tel']))
     {
         try
         {
+            // インサート文の作成
             $sql  = 'INSERT INTO user(name,tel) VALUES(:ONAMAE,:TEL)';
             $stmt = $dbh->prepare($sql);
 
+            // パラメータの設定
             $stmt->bindParam(':ONAMAE', $_POST['name'], PDO::PARAM_STR);
             $stmt->bindParam(':TEL', $_POST['tel'], PDO::PARAM_STR);
 
@@ -30,6 +32,7 @@
     <?php
         $sql = 'SELECT * FROM user';
         $stmt = $dbh->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        
         // foreach ($stmt as $result)
         // {
         //     echo '  <div class="drag" data-num="'.$result['id'].'" style="left:'.$result['left_x'].'px; top:'.$result['top_y'].'px;">'.PHP_EOL;
