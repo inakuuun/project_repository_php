@@ -1,0 +1,33 @@
+
+div.side_menu {
+    margin-left: 20px;
+    width: 200px;
+}
+
+div.side_menu h3 {
+    text-align: center;
+    padding: 3px;
+    margin-top: 20px;
+    background-color: #666;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+div.side_menu p {
+    margin-bottom: 10px;
+}
+
+div.side_menu select {
+    width: 100%;
+}
+
+div.side_menu input[type="text"] {
+    width: 100%;
+}
+
+div.side_menu input[type="submit"]{
+    display: block;
+    margin: 20px auto;
+}

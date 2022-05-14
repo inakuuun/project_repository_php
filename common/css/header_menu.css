@@ -1,0 +1,38 @@
+
+nav.top_navi {
+    background-color: #ccc;
+    padding: 10px;
+}
+
+nav.top_navi ul {
+    margin: 0 auto;
+    padding:0;
+    width: 800px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+nav.top_navi ul a{
+    width: 200px;
+    height: 50px;
+    border-left: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav.top_navi ul a:hover{
+    color:#f0e68c;
+}
+
+nav.top_navi ul a:first-child {
+    border-left: none;
+    border-radius: 5px 0 0 5px;
+}
+
+nav.top_navi ul a:last-child {
+    border-radius: 0 5px 5px 0;
+}
