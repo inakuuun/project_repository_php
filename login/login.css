@@ -1,0 +1,19 @@
+div.main {
+    width: 280px;
+    margin:0 auto;
+}
+
+h4 {
+    margin: 40 auto;
+    text-align:center;
+}
+
+div.main span {
+    display:block;
+    margin: 10px 0;
+    float:right;
+}
+
+div.main span.login-btn {
+    margin-right: 80px;
+}
