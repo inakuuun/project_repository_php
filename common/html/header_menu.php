@@ -1,6 +1,6 @@
     <nav class="top_navi">
         <ul class="display_flex">
-            <a href="#"><li>トップ</li></a>
+            <a href="http://localhost:8888/stores/top/top.php"><li>トップ</li></a>
             <a href="#"><li>新着一覧</li></a>
             <a href="#"><li>買い物かご</li></a>
             <!-- 非会員の時は非表示にする -->

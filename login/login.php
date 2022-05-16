@@ -5,23 +5,35 @@
   setcookie('user',$user);
   setcookie('member',$member);
   setcookie('title',$title);
+  session_start();
+  if(!empty($_SESSION['err_message']))
+  {
+    $err = $_SESSION['err_message'];
+    unset($_SESSION['err_message']);
+  }
 ?>
 
+<!-- スタイルの設定 -->
 <link rel="stylesheet" href="../common/css/style.css">
 <link rel="stylesheet" href="../common/css/template.css">
 <link rel="stylesheet" href="login.css">
 
+<!-- ヘッダーの作成 -->
 <?php require_once('../common/html/header.php')?>
     <div class="wrapper">
       <div class="tpad_80px">
         <h4>メールアドレスとパスワードを入力してください。</h4>
       </div>
-      <div class="error w_450px mrg-auto hidden-control">
-          <p>・メールアドレス、もしくはパスワードが間違っています。</p>
-          <p>・パスワードは正しい形式で入力してください。</p>
-          <p>・パスワードは必須項目です。</p>
-          <p>・メールアドレスは必須項目です。</p>
-          <p>・パスワードは8文字以上16文字以内で入力してください。</p>
+      <div class="error w_450px mrg-auto">
+        <?php 
+          if(!empty($err)):?>
+            <p><?php if(!empty($err[0])){echo $err[0];} ?></p>
+            <p><?php if(!empty($err[1])){echo $err[1];} ?></p>
+            <p><?php if(!empty($err[2])){echo $err[2];} ?></p>
+            <p><?php if(!empty($err[3])){echo $err[3];} ?></p>
+            <p><?php if(!empty($err[4])){echo $err[4];} ?></p>
+        <?php 
+          endif;?>
       </div>
       <form action="loginCheck.php" method="POST">
         <div class="main">

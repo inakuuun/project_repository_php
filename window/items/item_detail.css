@@ -9,3 +9,17 @@ div.main {
     width: 920px;
     margin: auto;
 }
+
+div.main-left {
+    width: 700px;
+    height: 500px;
+    padding-right: 10px;
+    overflow: scroll;
+}
+
+div.main-left h3 {
+    padding: 10px;
+    background-color: #666;
+    color: #fff;
+    font-weight: normal;
+}
