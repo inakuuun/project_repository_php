@@ -1,5 +1,7 @@
 -- 実行環境
 -- カテゴリーテーブル
+-- サーバー起動
+-- /Applications/MAMP/Library/bin/mysql -u root -p
 DROP TABLE items;
 DROP TABLE categories;
 

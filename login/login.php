@@ -14,8 +14,8 @@
 ?>
 
 <!-- スタイルの設定 -->
-<link rel="stylesheet" href="../common/css/style.css">
-<link rel="stylesheet" href="../common/css/template.css">
+<link rel="stylesheet" href="http://localhost:8888/stores/common/css/style.css">
+<link rel="stylesheet" href="http://localhost:8888/stores/common/css/template.css">
 <link rel="stylesheet" href="login.css">
 
 <!-- ヘッダーの作成 -->
@@ -25,15 +25,13 @@
         <h4>メールアドレスとパスワードを入力してください。</h4>
       </div>
       <div class="error w_450px mrg-auto">
-        <?php 
-          if(!empty($err)):?>
+        <?php if(!empty($err)):?>
             <p><?php if(!empty($err[0])){echo $err[0];} ?></p>
             <p><?php if(!empty($err[1])){echo $err[1];} ?></p>
             <p><?php if(!empty($err[2])){echo $err[2];} ?></p>
             <p><?php if(!empty($err[3])){echo $err[3];} ?></p>
             <p><?php if(!empty($err[4])){echo $err[4];} ?></p>
-        <?php 
-          endif;?>
+        <?php endif;?>
       </div>
       <form action="loginCheck.php" method="POST">
         <div class="main">

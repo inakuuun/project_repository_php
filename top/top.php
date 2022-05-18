@@ -1,8 +1,8 @@
 <!-- スタイルの設定 -->
-<link rel="stylesheet" href="../common/css/style.css">
-<link rel="stylesheet" href="../common/css/template.css">
-<link rel="stylesheet" href="../common/css/header_menu.css">
-<link rel="stylesheet" href="../common/css/side_menu.css">
+<link rel="stylesheet" href="http://localhost:8888/stores/common/css/style.css">
+<link rel="stylesheet" href="http://localhost:8888/stores/common/css/template.css">
+<link rel="stylesheet" href="http://localhost:8888/stores/common/css/header_menu.css">
+<link rel="stylesheet" href="http://localhost:8888/stores/common/css/side_menu.css">
 <link rel="stylesheet" href="top.css">
 
 <!-- 処理の継承 -->
@@ -11,9 +11,6 @@
 
 <!-- ヘッダーの作成 -->
 <?php require_once('../common/html/header.php')?>
-<?php
-
-?>
 <div class="container">
     <!-- ヘッダーメニューの作成 -->
     <?php require_once('../common/html/header_menu.php')?>
@@ -31,7 +28,7 @@
                     <?php foreach($itemArray as $item):?>
                         <tr>
                             <td><span id="image_path"><img src="<?php echo $item->getImagePath();?>" /></span></td>
-                            <td><span id="name"><a href="../window/items/item_detail_bg.php?itemno=<?php echo $item->getItemno();?>"><?php echo $item->getName();?></a></span></td>
+                            <td><span id="name"><a href="../window/items/item_detail.php?itemno=<?php echo $item->getItemno();?>"><?php echo $item->getName();?></a></span></td>
                             <td><span id="price"><?php echo $item->getPrice();?></span></td>
                             <td><span id="category_name"><?php echo $item->getCategoryName();?></span></td>
                         </tr>

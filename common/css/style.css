@@ -25,10 +25,11 @@ div.footer p {
     text-align: center;
     background-color: #000;
     color:#fff;
+    margin: 0;
 }
 
 div.wrapper {
     width: 980px;
-    height: 600px;
+    height: 650px;
     margin: auto;
 }

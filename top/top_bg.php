@@ -5,25 +5,23 @@
     /**
      * @summary 一覧表示SQLの取得
      */
-    $wherePart =
-      '   items.categoryno in(:CATEGORYNO)'
-    . '   AND items.name LIKE :VAGUENAME';
+    $wherePart = whereStatement();
     
     try{
         // SQLの作成
         $sql  = 
-          ' SELECT '
-        . '   items.itemno'
-        . '   ,items.name'
-        . '   ,items.img_path'
-        . '   ,items.price'
-        . '   ,categories.categoryno'
-        . '   ,categories.category_name'
-        . ' FROM items'
-        . '   INNER JOIN categories'
-        . '   ON items.categoryno = categories.categoryno'
-        . ' WHERE'
-        . $wherePart;
+         "SELECT 
+           items.itemno
+           ,items.name
+           ,items.img_path
+           ,items.price
+           ,categories.categoryno
+           ,categories.category_name
+         FROM items
+           INNER JOIN categories
+           ON items.categoryno = categories.categoryno
+         WHERE
+           $wherePart";
 
         // 準備
         $prepare = $dbh->prepare($sql);
@@ -85,4 +83,11 @@
         print $e->getMessage();
     }
 
+    function whereStatement(){
+        $where =
+        '   items.categoryno = :CATEGORYNO'
+        . '   AND items.name LIKE :VAGUENAME';
+
+        return $where;
+    }
 ?>

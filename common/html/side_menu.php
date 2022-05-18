@@ -1,6 +1,6 @@
         <div class="side_menu">
             <h3>検索</h3>
-            <form method="GET" action="top.php">
+            <form method="GET" action="http://localhost:8888/stores/top/top.php">
                 <p>カテゴリー検索</p>
                 <select name="categories">
                     <option value="0"></option>
