@@ -1,0 +1,78 @@
+div.container {
+    width: 100%;
+    height: 650px;
+}
+
+div.main {
+    display: flex;
+    width: 920px;
+    margin: auto;
+}
+
+div.main-left {
+    display: flex;
+    width: 700px;
+    height: 550px;
+    padding-right: 10px;
+    overflow: scroll;
+}
+
+div.main-left h3 {
+    padding: 10px;
+    background-color: #666;
+    color: #fff;
+    font-weight: normal;
+}
+
+div.main-left {
+    margin-top :30px;
+}
+
+div.buy-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 60px;
+}
+div.buy-image img {
+    width: 200px;
+    height: 200px;
+}
+
+div.buy-content {
+    max-width: 400px;
+    height: 200px;
+}
+
+/* 購入商品の内容 */
+div.buy {
+    display: flex;
+}
+
+/* 価格 */
+div.buy-cost p {
+    margin: 0;
+    font-size: 24px;
+    font-weight:bold;
+    color: red;
+}
+
+/* 送料等 */
+div.buy-cost p span {
+    font-size: 16px;
+}
+
+/* 数量 */
+div.buy-count {
+    margin-left: 10px;
+    padding: 8px;
+}
+
+/* 在庫 */
+div.stock ul {
+    display: flex;
+    padding: 0;
+}
+
+div.stock p a {
+    color: #1d54a7;
+}
