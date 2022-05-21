@@ -1,4 +1,3 @@
-
 div.container {
     width: 100%;
     height: 650px;
@@ -26,6 +25,7 @@ div.main-left h3 {
 
 div.detail {
     margin-top:40px;
+    display: flex;
 }
 
 div.detail-left {
@@ -35,4 +35,45 @@ div.detail-left {
 
 div.detail-left img {
     width: 280px;
+}
+
+div.detail-right h4 {
+    margin: 0;
+    font-size: 24px;
+    color: red;
+    margin-bottom: 50px;
+}
+
+div.detail-right h4 span {
+    font-size: 16px;
+    color: black;
+}
+
+div.buy-count {
+    margin: 3px 50px 0 0;
+    display: flex;
+}
+
+div.buy-count span {
+    width: 50px;
+}
+
+div.buy-count select {
+    width: 50px;
+    height: 25px;
+}
+
+div.buy-submit
+{
+    margin-top: 50px;
+}
+
+div.buy-submit input[type="submit"]{
+    margin-bottom: 10px;
+    background-color: #bf0000;
+    border-radius: 3px;
+    color: #fff;
+    width: 200px;
+    height: 34px;
+    border-style: none;
 }

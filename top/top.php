@@ -1,8 +1,10 @@
+<!-- パス設定ファイルの読み込み -->
+<?php require_once '../path.php'; ?>
 <!-- スタイルの設定 -->
-<link rel="stylesheet" href="http://localhost:8888/stores/common/css/style.css">
-<link rel="stylesheet" href="http://localhost:8888/stores/common/css/template.css">
-<link rel="stylesheet" href="http://localhost:8888/stores/common/css/header_menu.css">
-<link rel="stylesheet" href="http://localhost:8888/stores/common/css/side_menu.css">
+<link rel="stylesheet" href="<?php echo Path::$STYLE_CSS?>">
+<link rel="stylesheet" href="<?php echo Path::$TEMPLATE_CSS?>">
+<link rel="stylesheet" href="<?php echo Path::$HEADER_MENU_CSS?>">
+<link rel="stylesheet" href="<?php echo Path::$SIDE_MENU_CSS?>">
 <link rel="stylesheet" href="top.css">
 
 <!-- 処理の継承 -->
@@ -10,10 +12,10 @@
 <?php require_once('top_beans.php')?>
 
 <!-- ヘッダーの作成 -->
-<?php require_once('../common/html/header.php')?>
+<?php require_once Path::$HEADER_HTML; ?>
 <div class="container">
     <!-- ヘッダーメニューの作成 -->
-    <?php require_once('../common/html/header_menu.php')?>
+    <?php require_once Path::$HEADER_MENU_HTML; ?>
     <div class="main">
         <div class="main-left">
             <h3>商品一覧</h3>
@@ -37,8 +39,8 @@
             </table>
         </div><!-- main-left -->
         <!-- サイドメニューの作成 -->
-        <?php require_once('../common/html/side_menu.php')?>
+        <?php require_once Path::$SIDE_MENU_HTML; ?>
     </div><!-- main -->
 </div><!-- container -->
 <!-- フッターの作成 -->
-<?php require_once('../common/html/footer.php')?>
+<?php require_once Path::$FOOTER_HTML; ?>

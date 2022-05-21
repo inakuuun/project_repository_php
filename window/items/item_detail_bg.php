@@ -2,8 +2,7 @@
     // データベースに接続
     require_once('../../common/databases/stores.php');
     
-     $itemno = $_GET['itemno'];
-    $wherePart = 'itemno = :ITEMNO';
+     $wherePart = 'itemno = :ITEMNO';
     
     try{
         $sql = 
@@ -25,8 +24,9 @@
         // 準備
         $prepare = $dbh->prepare($sql);
 
-        // パラメータにバインド
-        // 商品番号
+        // 商品番号の取得
+        $itemno = $_GET['itemno'];
+        // 商品番号をバインド
         $prepare->bindValue(':ITEMNO', $itemno , PDO::PARAM_INT);
 
         // SQLの実行
@@ -34,7 +34,6 @@
 
         // SQLの情報を配列で取得
         $stmt = $prepare->fetchAll(PDO::FETCH_ASSOC);
-        $imageRoot = '../../common/images/items';
 
     }catch(PDOException $e){
 
