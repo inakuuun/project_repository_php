@@ -4,7 +4,6 @@ div.container {
     height: 650px;
 }
 
-
 div.main {
     display: flex;
     width: 920px;
@@ -16,6 +15,15 @@ div.main-left {
     height: 550px;
     padding-right: 10px;
     overflow: scroll;
+    /* 「IE」「Microsoft Edge」への対応 */
+    -ms-overflow-style: none;
+    /* 「Firefox」への対応 */
+    scrollbar-width: none;
+}
+
+/* 「Google Chrome」「Safari」への対応 */
+div.main-left::-webkit-scrollbar {
+    display: none;
 }
 
 div.main-left h3 {
