@@ -42,6 +42,6 @@ div.footer p {
 
 div.wrapper {
     width: 980px;
-    min-height: 650px;
+    height: 650px;
     margin: auto;
 }
