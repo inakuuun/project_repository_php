@@ -2,7 +2,9 @@
     // データベースに接続
     require_once('../../common/databases/stores.php');
     
-    // where文を構成
+    /**
+     * @summary where文を構成
+     */
     $wherePart = 'itemno = :ITEMNO';
     
     try{
@@ -38,6 +40,6 @@
         $stmt = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
     }catch(PDOException $e){
-
+      echo $e;
     }
-?> 
+?>

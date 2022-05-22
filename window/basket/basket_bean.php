@@ -1,5 +1,8 @@
 <?php
-
+    /**
+     * @summary 買い物かごbean
+     * @remarks 買い物かごbeanクラス
+     */
     class Basket {
         // 商品名
         private $itemname;

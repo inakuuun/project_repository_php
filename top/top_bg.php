@@ -1,9 +1,12 @@
 <?php
     // データベースに接続
     require_once('../common/databases/stores.php');
+
+    // 商品一覧beanファイルを読み込む
     require_once('top_bean.php');
+    
     /**
-     * @summary 一覧表示SQLの取得
+     * @summary where文を構成
      */
     $wherePart = whereStatement();
     

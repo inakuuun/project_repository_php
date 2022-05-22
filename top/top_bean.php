@@ -1,6 +1,9 @@
 <?php
-
-class Top {
+    /**
+     * @summary 商品一覧bean
+     * @remarks 商品一覧beanクラス
+     */
+    class Top {
         // 商品番号
         private $itemno;
         // 商品名
