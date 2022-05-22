@@ -2,9 +2,11 @@
     // データベースに接続
     require_once('../../common/databases/stores.php');
     
-     $wherePart = 'itemno = :ITEMNO';
+    // where文を構成
+    $wherePart = 'itemno = :ITEMNO';
     
     try{
+      // 商品テーブルとカテゴリーテーブルから情報を取得
         $sql = 
           "SELECT 
           items.itemno
@@ -19,7 +21,7 @@
           INNER JOIN categories
           ON items.categoryno = categories.categoryno
         WHERE
-          $wherePart";
+          $wherePart ";
 
         // 準備
         $prepare = $dbh->prepare($sql);

@@ -1,7 +1,7 @@
 <?php
     // データベースに接続
     require_once('../common/databases/stores.php');
-    require_once('top_beans.php');
+    require_once('top_bean.php');
     /**
      * @summary 一覧表示SQLの取得
      */

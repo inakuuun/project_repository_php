@@ -49,7 +49,11 @@
          */
         public static $IMG_ROOT_PATH = 'http://localhost:8888/stores/common/images/items/';
 
-        public static $BASKET_ROOT_PATH = 'http://localhost:8888/stores/window/basket/basket_controller.php';
+        // 買い物かご画面
+        public static $BASKET_ROOT_PATH = 'http://localhost:8888/stores/window/basket/basket_item.php';
+
+        // トップページ
+        public static $TOP_ROOT_PATH = 'http://localhost:8888/stores/top/top.php';
         
     }
 
