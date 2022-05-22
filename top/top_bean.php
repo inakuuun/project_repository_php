@@ -14,7 +14,15 @@ class Top {
         // カテゴリー名
         private $categoryName;
 
-        // コンストラクタ(商品名、価格、画像パス)
+        /**
+         * @summary コンストラクタ
+         * @param itemno 商品番号
+         * @param name 商品名
+         * @param imgPath 画像パス
+         * @param price 価格
+         * @param categoryno カテゴリー番号
+         * @param categoryName カテゴリー名
+         */
         public function __construct($itemno, $name, $imgPath,$price,$categoryno,$categoryName) {
             // 商品番号をセット
             $this->itemno = $itemno;

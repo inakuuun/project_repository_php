@@ -9,7 +9,7 @@
 
 <!-- 処理の継承 -->
 <?php require_once('top_bg.php')?>
-<?php require_once('top_beans.php')?>
+<?php require_once('top_bean.php')?>
 
 <!-- ヘッダーの作成 -->
 <?php require_once Path::$HEADER_HTML; ?>

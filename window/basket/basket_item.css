@@ -10,7 +10,6 @@ div.main {
 }
 
 div.main-left {
-    display: flex;
     width: 700px;
     height: 550px;
     padding-right: 10px;
@@ -26,6 +25,11 @@ div.main-left h3 {
 
 div.main-left {
     margin-top :30px;
+}
+
+div.basket {
+    display: flex;
+    width: 700px;
 }
 
 div.buy-image {
