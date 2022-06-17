@@ -1,6 +1,7 @@
-<!-- スタイルの設定 -->
-<?php require_once '../../path.php'; ?>
-
+<?php require_once '../../common/php/path.php'; ?>
+<!-- トークン発行用ファイル -->
+<?php require_once PATH::$CREATE_TOKEN_PHP; ?>
+<!-- スタイルファイル読み込み -->
 <link rel="stylesheet" href="<?php echo Path::$STYLE_CSS?>">
 <link rel="stylesheet" href="<?php echo Path::$TEMPLATE_CSS?>">
 <link rel="stylesheet" href="<?php echo Path::$HEADER_MENU_CSS?>">
@@ -36,6 +37,7 @@
                     <div class="buy">
                         <div class="buy-count">
                             <span>個数：</span>
+                            <!-- for文で在庫分ループ処理をすればいい。 -->
                             <select name="buy_count">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -52,7 +54,9 @@
         </div><!-- main-left -->
         <!-- サイドメニューの作成 -->
          <?php require_once Path::$SIDE_MENU_HTML; ?>
-         <!-- 商品名 -->
+        <!-- 商品番号 -->
+        <input type="hidden" name="itemno" value="<?php echo $stmt[0]['itemno'];?>" />
+        <!-- 商品名 -->
         <input type="hidden" name="itemname" value="<?php echo $stmt[0]['name'];?>" />
         <!-- 画像パス -->
         <input type="hidden" name="img_path" value="<?php echo Path::$IMG_ROOT_PATH.$stmt[0]['img_path'];?>" />

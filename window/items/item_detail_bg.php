@@ -40,6 +40,6 @@
         $stmt = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
     }catch(PDOException $e){
-      echo $e;
+      echo $e->getMessage();
     }
 ?>

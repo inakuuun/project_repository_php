@@ -1,5 +1,5 @@
 <!-- スタイルの設定 -->
-<?php require_once('../../path.php');?>
+<?php require_once('../../common/php/path.php');?>
 <link rel="stylesheet" href="<?php echo Path::$STYLE_CSS?>">
 <link rel="stylesheet" href="<?php echo Path::$TEMPLATE_CSS?>">
 <link rel="stylesheet" href="<?php echo Path::$HEADER_MENU_CSS?>">
@@ -31,6 +31,7 @@
                             </div>
                             <div class="buy-count">
                                 <span>数量：</span>
+                                <!-- for文で在庫数分ループ処理を行なって、postで受け取ったbuy-countの値の時にselectedをつけるようにすればいい -->
                                 <select name="buy-count">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -41,16 +42,19 @@
                         <div class="stock">
                             <p>在庫あり</p>
                             <!-- TODO: 削除用処理画面を作成 -->
-                            <p><a href="#">削除</a></p>
+                            <p><a href="basket_item.php?delflg=<?php echo $bas->getItemNo()?>">削除</a></p>
                         </div>
                     </div><!-- buy-content -->
                 </div><!-- basket -->
             <?php endforeach;?>
          </div><!-- main-left -->
         <!-- サイドメニューの作成 -->
-        <div>
+        <!-- TODO: 購入ページへのボタンなどを作成する必要がある -->
+        <div class="side-menu">
             <form method="post" action="">
-                <input type="submit">
+                <input type="submit" value="ご購入手続き">
+                <p class="subtotal">小計<span>9300&nbsp;円</span></p>
+                <p class="postage">送料<span>送料無料</span></p>
             </form>
         </div>
     </div><!-- main -->

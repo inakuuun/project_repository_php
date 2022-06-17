@@ -45,6 +45,7 @@ div.buy-image img {
 div.buy-content {
     max-width: 400px;
     height: 200px;
+    margin-bottom: 10px;
 }
 
 /* 購入商品の内容 */
@@ -57,7 +58,7 @@ div.buy-cost p {
     margin: 0;
     font-size: 24px;
     font-weight:bold;
-    color: red;
+    color: #bf0000;
 }
 
 /* 送料等 */
@@ -79,4 +80,35 @@ div.stock ul {
 
 div.stock p a {
     color: #1d54a7;
+}
+
+div.side-menu {
+    width: 190px;
+}
+
+div.side-menu input[type="submit"] {
+    margin: 30px 0 10px;
+    background-color: #bf0000;
+    border-radius: 3px;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border-style: none;
+}
+
+p.subtotal {
+    font-size: 18px;
+}
+
+p.subtotal span {
+    font-size: 19px;
+    color: #bf0000;
+    font-weight: bold;
+    float: right;
+}
+
+p.postage span {
+    color: #bf0000;
+    font-weight: bold;
+    float: right;
 }

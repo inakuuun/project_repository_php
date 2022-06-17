@@ -4,6 +4,8 @@
      * @remarks 買い物かごbeanクラス
      */
     class Basket {
+        // 商品番号
+        private $itemno;
         // 商品名
         private $itemname;
         // 画像パス
@@ -27,7 +29,9 @@
          * @param stock 在庫数
          */
 
-        public function __construct($itemname,$image_path,$price,$send_cost,$buy_count,$stock){
+        public function __construct($itemno,$itemname,$image_path,$price,$send_cost,$buy_count,$stock){
+            // 商品番号をセット
+            $this->itemno = $itemno;
             // 商品名をセット
             $this->itemname = $itemname;
             // 画像パスをセット
@@ -40,6 +44,11 @@
             $this->buy_count = $buy_count;
             // 在庫数をセット
             $this->stock = $stock;
+        }
+
+        // 商品番号getter
+        public function getItemNo(){
+            return $this->itemno;
         }
 
         // 商品名getter

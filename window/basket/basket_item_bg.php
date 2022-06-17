@@ -2,6 +2,17 @@
     // 買い物かごbeanファイルを読み込む
     require_once 'basket_bean.php';
 
+    if(!empty($_GET['delflg']))
+    {
+        $delflg = filter_input(INPUT_GET,'delflg');
+    }
+
+    // 商品番号の値が存在する場合
+    if(!empty($_POST['itemno']))
+    {
+        $itemno = filter_input(INPUT_POST,'itemno');
+    }
+
     // 商品名の値が存在する場合
     if(!empty($_POST['itemname']))
     {
@@ -44,18 +55,23 @@
         $buy_count = filter_input(INPUT_POST,'buy_count');
     }
 
-    // バスケットクラスのインスタンス化
-    $result = new Basket($itemname,$img_path,$price,$send_cost,$buy_count,$itemstock);
-
+    session_start();
+    
+    $csrf_token = $_SESSION['csrf_token'];
     // 配列の初期化
     $basket = [];
+    // 画面遷移時のみ
+    if($_SESSION['csrf_token'] == $csrf_token)
+    {
+        // バスケットクラスのインスタンス化
+        $result = new Basket($itemno,$itemname,$img_path,$price,$send_cost,$buy_count,$itemstock);
+        $basket[] = $result;
+        unset($_SESSION['csrf_token']);
+    }
 
     // 今回生成したインスタンスを配列に格納
-    $basket[] = $result;
 
-     // セッションスタート
-     session_start();
-
+    //  TODO: リロード時postのインスタンスが追加されるため、判定が必要
     // セッションの中身が存在する場合
     if(!empty($_SESSION['basket']))
     {
@@ -70,6 +86,7 @@
         unset($_SESSION['basket']);
     }
 
+    unset($_SESSION['csrf_token']);
     // 購入商品情報をセッションに格納
     $_SESSION['basket'] = $basket;
     

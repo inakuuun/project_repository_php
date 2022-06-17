@@ -1,4 +1,4 @@
-<?php require_once '../../path.php'; ?>
+<?php require_once '../php/path.php'; ?>
     <nav class="top_navi">
         <ul class="display_flex">
             <a href="<?php echo Path::$TOP_ROOT_PATH;?>"><li>トップ</li></a>

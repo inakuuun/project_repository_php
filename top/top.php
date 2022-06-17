@@ -1,5 +1,5 @@
 <!-- パス設定ファイルの読み込み -->
-<?php require_once '../path.php'; ?>
+<?php require_once '../common/php/path.php'; ?>
 <!-- スタイルの設定 -->
 <link rel="stylesheet" href="<?php echo Path::$STYLE_CSS?>">
 <link rel="stylesheet" href="<?php echo Path::$TEMPLATE_CSS?>">
