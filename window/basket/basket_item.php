@@ -47,7 +47,7 @@
                     </div><!-- buy-content -->
                 </div><!-- basket -->
             <?php endforeach;?>
-         </div><!-- main-left -->
+          </div><!-- main-left -->
         <!-- サイドメニューの作成 -->
         <!-- TODO: 購入ページへのボタンなどを作成する必要がある -->
         <div class="side-menu">
